@@ -104,7 +104,7 @@ hex.ui = (function dataSimulator(d3, Rx) {
 
     pattern.append('image')
       .attr('xlink:href', '/img/redhat.svg')
-      .attr('width', honeycomb.dimensions.x * 0.98)
+      .attr('width', honeycomb.dimensions.x * 0.5)
       .attr('height', honeycomb.dimensions.y)
       .attr('x', -point.x + 2.6 * honeycomb.size )
       .attr('y', -point.y - 1.1 * honeycomb.size );
