@@ -52,8 +52,8 @@ hex.ui = (function dataSimulator(d3, Rx) {
     });
   }
 
-  var hexagonsPerRow = 38;
-  var points = d3.range(1026).map(function(currentValue, index) {
+  var hexagonsPerRow = 16;
+  var points = d3.range(128).map(function(currentValue, index) {
         var x_i =  (index % hexagonsPerRow) + 1
           , y_i = (Math.floor(index / hexagonsPerRow)) + 1;
         if (y_i % 2 !== 0) {

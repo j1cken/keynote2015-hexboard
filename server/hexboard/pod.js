@@ -44,7 +44,7 @@ var environment = {
   , pool: listWatchAgent
   }, optionsBase)
 , state: {first  : true, pods: {}}
-, subjects: _.range(1026).map(function(index) {
+, subjects: _.range(128).map(function(index) {
     return new Rx.ReplaySubject(1);
   })
 , parser: new PodParser()
@@ -288,7 +288,7 @@ var liveStream = Rx.Observable.merge(environment.subjects)
 var watchStream = function(env, stream) {
   return Rx.Observable.interval(100)
     .flatMap(function(index) {
-      var n = index % 1026;
+      var n = index % 128;
       return stream.skip(n).take(1)
     })
     .filter(function(pod) {

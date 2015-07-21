@@ -119,7 +119,8 @@ module.exports = exports = {
     hexboard.claimHexagon(sketch);
     sketch.url = sketch.pod ? sketch.pod.url : null;
     sketch.uiUrl = '/api/sketch/' + sketch.containerId + '/image.png?ts=' + new Date().getTime()
-    sketch.pageUrl = 'http://1k.jbosskeynote.com/api/sketch/' + sketch.containerId + '/page.html'
+    // sketch.pageUrl = 'http://1k.jbosskeynote.com/api/sketch/' + sketch.containerId + '/page.html'
+    sketch.pageUrl = 'http://hexboard.local/api/sketch/' + sketch.containerId + '/page.html'
     Rx.Observable.return(sketch)
     .flatMap(function(sketch) {
       return Rx.Observable.forkJoin(

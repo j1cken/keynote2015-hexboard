@@ -15,7 +15,7 @@ var getRandomInt = function (min, max) {
 var PodParser = function() {
 
   var idMap = {};
-  var availableIds = _.range(1026);
+  var availableIds = _.range(128);
 
   var takeRandomId = function() {
     var index = getRandomInt(0, availableIds.length);

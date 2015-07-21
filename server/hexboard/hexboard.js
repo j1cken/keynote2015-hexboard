@@ -6,7 +6,7 @@ var Rx = require('rx')
 
 var HexBoard = function() {
 
-  var hexagons = _.range(1026).map(function(index) {
+  var hexagons = _.range(128).map(function(index) {
     return {
       id: index,
       pod: null,
